@@ -18,10 +18,11 @@ $(function () {
   // adding a listener to saveBtn with a function to set items in local storage
   $(".saveBtn").on("click", function() {
     // creating a variable description equaling the value content added by user from the description html class
-    var description = $(this).sibling(".description").val()
+    var description = $(this).siblings(".description").val()
     console.log(description)
     // creating variable time equaling the id of the time blocks
     var time = $(this).parent().attr("id")
+    console.log(time)
 
     // setting items to local storage with the key being variable time and the value being the description added by user
     localStorage.setItem(time, description)
@@ -37,11 +38,14 @@ $(function () {
   function timeTrack() {
     // creating a variable today 
     var timeNow = dayjs().hour() 
+    console.log(timeNow)
     
     // grabbing the class time-block creating a function to compare the time block to the timeNow
     $(".time-block").each(function() {
       // created the variable block time to use it with in the conditional statement
+      // I have block time equaling  the integer split from the id "hour-:"9","10","11","12","13","14","15","16","17","18","19","20","21","
       var blockTime = parseInt($(this).attr("id").split("-")[1]);
+      console.log(blockTime)
 
       // using a conditional statement to compare blockTime to timeNow
       // if block time is less then  time now add class "past"
@@ -71,22 +75,37 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: 
   // How can the id attribute of each time-block be used to do this?
 
-  // called hour
+  // called id hour time and class description to return it's value from local storage
   $("#hour-8 .description").val(localStorage.getItem("hour-8"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-18 .description").val(localStorage.getItem("hour-18"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-19 .description").val(localStorage.getItem("hour-19"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-20 .description").val(localStorage.getItem("hour-20"));
+  // called id hour time and class description to return it's value from local storage
   $("#hour-21 .description").val(localStorage.getItem("hour-21"));
   
+  
+  // calling the timeTrack function
   timeTrack()
 
   //
@@ -96,7 +115,6 @@ $(function () {
   var currentDay = dayjs().format('dddd MMMM D[th],');
   // used jquery to grab the paragraph element with currentDay id and add text of the currentDay variable
   $('#currentDay').text(currentDay);
-
-
+  console.log(currentDay)
 
 });
