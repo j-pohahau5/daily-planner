@@ -17,7 +17,9 @@ $(function () {
   // useful when saving the description in local storage?
 
   // var saveBtn = document.querySelector(".saveBtn")
-  // addEventListener('click', saveBtn)
+  // var description = document.querySelector(".description")
+  // localStorage.setItem(".saveBtn", ".description")
+  // console.log(localStorage)
   
   //
   // TODO: Add code to apply the past, present, or future class to each time
