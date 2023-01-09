@@ -18,7 +18,8 @@ $(function () {
   // adding a listener to saveBtn with a function to set items in local storage
   $(".saveBtn").on("click", function() {
     // creating a variable description equaling the value content added by user from the description html class
-    var description = $(this).append(".description").val()
+    var description = $(this).sibling(".description").val()
+    console.log(description)
     // creating variable time equaling the id of the time blocks
     var time = $(this).parent().attr("id")
 
@@ -40,7 +41,7 @@ $(function () {
     // grabbing the class time-block creating a function to compare the time block to the timeNow
     $(".time-block").each(function() {
       // created the variable block time to use it with in the conditional statement
-      var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+      var blockTime = parseInt($(this).attr("id").split("-")[1]);
 
       // using a conditional statement to compare blockTime to timeNow
       // if block time is less then  time now add class "past"
