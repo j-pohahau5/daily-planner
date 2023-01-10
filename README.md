@@ -1,9 +1,9 @@
 # daily-planner
 
 ## Description 
+My motivation with this project was to complete the daily planner for someone to schedule out there day for work or class so that they can make their day as efficient as possible. The problem it solved was that it gave the user a chance to make their day as efficient as they can make it by being able to see their time block and add text to those blocks so they can see  what is to do each hour of their busy day. My project stands out because i added more time then what was asked because i realize my work day is longer then just the average 9-5, it can push to 10-12 hour work days depending on the work load.
 
-
-
+https://j-pohahau5.github.io/daily-planner/
 
 ## Installation
 
